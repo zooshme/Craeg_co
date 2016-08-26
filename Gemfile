@@ -12,6 +12,9 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem "middleman", "~> 4.1"
 gem "middleman-blog"
 gem "middleman-livereload"
+# gem 'middleman-thumbnailer'
+
+#gem 'middleman-thumbnailer', github: 'middleman-contrib/middleman-thumbnailer', branch: 'master'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
