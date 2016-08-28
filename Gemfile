@@ -8,13 +8,16 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 # Windows does not come with time zone data
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
+# For styles
+gem 'bitters'
+gem 'bourbon'
+gem 'neat'
+
 # Middleman Gems
 gem "middleman", "~> 4.1"
 gem "middleman-blog"
 gem "middleman-livereload"
-# gem 'middleman-thumbnailer'
-
-#gem 'middleman-thumbnailer', github: 'middleman-contrib/middleman-thumbnailer', branch: 'master'
+#gem 'middleman-simple-thumbnailer'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 

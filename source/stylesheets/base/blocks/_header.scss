@@ -1,0 +1,24 @@
+header {
+  @include span-columns(12);
+}
+.logo {
+  font-weight: bold;
+  font-size: modular-scale(4);
+  @include span-columns(3);
+  span {
+    border-bottom: 0.4rem solid palette(current, light);
+    padding-bottom: 0.4rem;
+  }
+}
+
+.main-nav {
+  @include span-columns(9);
+  font-weight: bold;
+  text-align: right;
+  margin-top: modular-scale(1);
+  li {
+    display: inline-block;
+    margin-left: modular-scale(5);
+    font-size: modular-scale(1);
+  }
+}

@@ -20,14 +20,7 @@ page '/*.txt', layout: false
 # Helpers
 ###
 
-require 'middleman-thumbnailer'
-activate :thumbnailer,
-  :dimensions => {
-    :small => '200x',
-    :medium => '400x300'
-  },
-  :include_data_thumbnails => true,
-  :namespace_directory => %w(gallery)
+#activate :middleman_simple_thumbnailer
 
 activate :directory_indexes
 

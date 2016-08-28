@@ -1,0 +1,142 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+$base-font-family: "Gotham";
+$base-font-family: "Gotham";
+$heading-font-family: "Gotham";
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+$palettes: (
+current: (
+  x-light:   #FFFCF4,
+  light:     #F5EEDA,
+  mid-light: #A8A498,
+  base:      #5C5B57,
+  mid-dark:  #585656,
+  dark:      #363636,
+  x-dark:    #1D1D1D,
+  xx-dark:   #0F0F0F,
+  action:    #F26149
+),
+  brown: (
+    x-light:   #FFFCF4,
+    light:     #F5EEDA,
+    mid-light: #A8A498,
+    base:      #5C5B57,
+    mid-dark:  #585656,
+    dark:      #363636,
+    x-dark:    #1D1D1D,
+    xx-dark:   #0F0F0F,
+    action:    #F26149
+  ),
+  bluegrey: (
+    xx-light:  #EDF0F1,
+    x-light:   #becbd1,
+    light:     #9ba7ac,
+    base:      #607882,
+    dark:      #52676f,
+    x-dark:    #304750
+  ),
+  orange: (
+    x-light:   #fefaf3,
+    light:     #f4cc80,
+    base:      #ea9901
+  ),
+  yellow: (
+    x-light:   #ffffe1,
+    light:     #e5e4a9,
+    base:      #ffdf00,
+    dark:      #bfab00,
+    x-dark:    #6f641d
+  ),
+  red: (
+    xx-light: #FCF4F4,
+    x-light:   #ffe1e1,
+    light:     #e5a9a9,
+    base:      #c23131,
+    dark:      #9c3232,
+    x-dark:    #7a1313
+  ),
+  green: (
+    xx-light:  #f3fbf6,
+    x-light:   #bbf3cf,
+    light:     #74c58f,
+    base:      #12b447,
+    dark:      #189443,
+    x-dark:    #006225
+  ),
+  blue: (
+    x-light:   #b8e4f4,
+    light:     #6cbcdb,
+    base:      #00a1e0,
+    dark:      #0b86b5,
+    x-dark:    #155991,
+    abyc-blue: #09b2d7
+  ),
+  preblue: (
+    x-light:   #E0E4FA,
+    light:     #95A3E5,
+    base:      #4359C1
+  ),
+  scoopblue: (
+    x-light:   #D1EFF0,
+    light:     #8EDADD,
+    base:      #00B4BB
+  ),
+  purple: (
+    xx-light:   #FDF1FF,
+    light:     #D8ACE1,
+    base:      #87189D
+  ),
+  pink: (
+    xx-light:   #FFEAF3,
+    light:     #E778A8,
+    base:      #D41568
+  )
+);
+
+@function palette($palette, $tone: "base") {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+
+
+// Font Colors
+$base-font-color: palette(current, light);
+$action-color: palette(current, light);
+
+// Border
+$base-border-color: palette(current, light);
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
