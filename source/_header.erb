@@ -4,10 +4,10 @@
   </div>
   <nav class="main-nav">
     <ul>
-      <li><%= link_to 'Articles', '/articles.html' %></li>
-      <li><%= link_to 'Notes', '/notes.html' %></li>
-      <li><%= link_to 'A thing a day', '/a-thing-a-day.html' %></li>
-      <li><%= link_to 'Info', '/' %></li>
+      <li class="<%= is_page_selected("/articles/") %>"><%= link_to 'Articles', '/articles.html' %></li>
+      <li class="<%= is_page_selected("/notes/") %>"><%= link_to 'Notes', '/notes.html' %></li>
+      <li class="<%= is_page_selected("/a-thing-a-day/") %>"><%= link_to 'A thing a day', '/a-thing-a-day.html' %></li>
+      <li class="<%= is_page_selected("/info/") %>"><%= link_to 'Info', '/info.html' %></li>
     </ul>
   </nav>
 </header>

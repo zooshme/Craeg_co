@@ -1,14 +1,16 @@
 .main {
+
 }
 
 // Home
 .home-content {
-  height: 70vh;
+  height: 85vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   h1 {
+    font-weight: 700;
     span {
       display: block;
       font-size: modular-scale(10);
@@ -20,5 +22,39 @@
         color: palette(current, base);
       }
     }
+  }
+}
+
+// Notes
+.notes-content {
+
+  @include span-columns(12);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-weight: 700;
+    span {
+      display: block;
+      font-size: modular-scale(10);
+      line-height: 0.85;
+      &:nth-child(2n) {
+        color: palette(current, mid-light);
+      }
+      &:nth-child(3n) {
+        color: palette(current, base);
+      }
+    }
+  }
+}
+
+.notes-list {
+  @include span-columns(4);
+  @include shift(3);
+  img {
+    width: 100%;
   }
 }
