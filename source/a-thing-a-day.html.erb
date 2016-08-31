@@ -2,9 +2,17 @@
 pageable: true
 per_page: 10
 layout: layout
+title: A thing a day
+description: "I'm challenging myself to share a 'thing' a day. Design, photography, anything."
 ---
 
-<h4>Articles</h4>
+<div class="main-content">
+  <h1>
+    <span>Design</span>
+    <span>Photography</span>
+    <span>Anything</span>
+  </h1>
+
 <% blog.tags.sort.each do |tag, articles| %>
   <% if (tag == 'thing') then %>
     <% articles.sort_by(&:title).each do |article| %>

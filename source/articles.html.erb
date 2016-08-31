@@ -2,9 +2,17 @@
 pageable: true
 per_page: 10
 layout: layout
+title: Articles
+description: "I'm not a writer, but I'm going to try to write. Here will be my first rough around the edges attempts."
 ---
 
-<h4>Articles</h4>
+<div class="main-content">
+  <h1>
+    <span>Articles</span>
+    <span>Writing</span>
+    <span>Essays</span>
+  </h1>
+
 <% blog.tags.sort.each do |tag, articles| %>
   <% if (tag == 'article') then %>
     <% articles.sort_by(&:title).each do |article| %>
