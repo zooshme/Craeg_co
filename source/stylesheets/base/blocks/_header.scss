@@ -3,34 +3,33 @@ header {
 }
 .logo {
   font-family: $heading-font-family;
-  font-weight: bold;
-  font-size: modular-scale(4);
+  font-weight: 900;
+  font-size: modular-scale(6);
   @include span-columns(3);
   $mobile: new-breakpoint(max-width 500px 4);
   @include media($mobile) {
     @include span-columns(12);
   }
   span {
-    border-bottom: 0.4rem solid palette(current, light);
-    padding-bottom: 0.2rem;
+    border-bottom: 0.65rem solid palette(current, light);
   }
 }
 
 .main-nav {
   font-family: $heading-font-family;
   @include span-columns(9);
-  font-weight: bold;
+  font-weight: 900;
   text-align: right;
   margin-top: modular-scale(1);
   li {
     display: inline-block;
     margin-left: modular-scale(5);
-    font-size: modular-scale(1);
+    font-size: modular-scale(4);
   }
   .active {
     a {
-      border-bottom: 0.25rem solid palette(current, light);
-      padding-bottom: 0.4rem;
+      border-bottom: 0.45rem solid palette(current, light);
+      padding-bottom: 0.2rem;
     }
   }
 }

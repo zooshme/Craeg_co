@@ -5,9 +5,10 @@
 @import "neat";
 
 body {
-  background: palette(current, x-dark);
+  background: palette(current, xx-dark);
   background-size: cover;
   padding: modular-scale(3) modular-scale(8);
+  font-size: 100%;
   &:after {
     content: ' ';
     display: block;
@@ -18,7 +19,7 @@ body {
     height: 100%;
     z-index: 1;
     opacity: 0.025;
-    background-image: url(../images/hero.png);
+    // background-image: url(../images/hero.png);
     background-repeat: no-repeat;
     background-position: 50% 0;
     -ms-background-size: cover;

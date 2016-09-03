@@ -1,5 +1,5 @@
 ---
-title: note
+title: Presentable Episode 7
 date: 2016-08-31 19:58 UTC
 tags: note
 thumbnail_image: http://placehold.it/300x200.jpg

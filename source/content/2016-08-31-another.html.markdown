@@ -1,5 +1,5 @@
 ---
-title: another
+title: Impossible Foods’ Meat-Free Burger
 date: 2016-08-31 19:59 UTC
 tags: note
 thumbnail_image: http://placehold.it/300x200.jpg

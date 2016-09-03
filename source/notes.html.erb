@@ -1,6 +1,6 @@
 ---
 pageable: true
-per_page: 10
+per_page: 4
 layout: layout
 title: 'Notes'
 description: "A place for me to dump anything cool I learn / find / read / hear."
@@ -12,17 +12,41 @@ description: "A place for me to dump anything cool I learn / find / read / hear.
     <span>Inspiration</span>
     <span>Brain dump</span>
   </h1>
-
+  <aside class="lead-in-detail"></aside>
   <section class="notes-list">
   <% blog.tags.sort.each do |tag, articles| %>
     <% if (tag == 'note') then %>
       <% articles.sort_by(&:title).each do |article| %>
       <article>
         <img src="<%= article.data.thumbnail_image %>">
-        <%= link_to article.title, article %>
+        <h2>
+          <%= link_to article.title, article %>
+        </h2>
+        <time><%= article.date.strftime('%b %e, %Y') %></time>
+        <%= article.summary %>
       </article>
       <% end %>
     <% end %>
   <% end %>
   </section>
 </div>
+
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<ul>
+  <% page_articles.each_with_index do |article, i| %>
+    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+  <% end %>
+</ul>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>

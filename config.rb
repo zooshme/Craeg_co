@@ -24,7 +24,7 @@ current_page.url == page ? "active" : ''
 end
 end
 
-#activate :middleman_simple_thumbnailer
+#activate :middleman_simple_thumbnailer1
 
 activate :directory_indexes
 
@@ -49,9 +49,9 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+  blog.paginate = true
+  blog.per_page = 2
+  blog.page_link = "page/{num}"
 end
 
 page "/feed.xml", layout: false

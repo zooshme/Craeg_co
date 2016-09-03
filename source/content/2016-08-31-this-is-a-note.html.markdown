@@ -1,5 +1,5 @@
 ---
-title: this-is-a-note
+title: Stranger Things
 date: 2016-08-31 20:00 UTC
 tags: note
 thumbnail_image: http://placehold.it/300x200.jpg
