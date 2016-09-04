@@ -20,6 +20,7 @@ gem "middleman-livereload"
 #gem 'middleman-simple-thumbnailer'
 gem  "nokogiri"
 
+
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 # For feed.xml.builder

@@ -54,6 +54,12 @@ activate :blog do |blog|
   blog.page_link = "page/{num}"
 end
 
+def articles_by_tag(tag)
+  sitemap.resources.select do |resource|
+    resource.data.tags.include?(tag)
+  end
+end
+
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 # configure :development do
