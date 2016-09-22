@@ -27,10 +27,18 @@ description: "A place for me to dump anything cool I learn / find / read / hear.
   </h1>
   <aside class="lead-in-detail"></aside>
   <section class="notes-list">
-
-  <%= page_number %>
-
-  <%= link_to "Hello", prev_page %>
+  
+  <% if num_pages > 1 %>
+    <% for i in 1..num_pages do %>
+      <li>
+        <% if i == 1 %>
+          <a href="<%= blog('notes').options.prefix %>">1</a>
+        <% else %>
+          <a href="<%= blog('notes').options.prefix %>/page/<%= i%>"><%= i %></a>
+        <% end %>
+      </li>
+    <% end %>
+  <% end %>
   
   <% page_articles.each do |article| %>
   <article>
