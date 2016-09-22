@@ -13,13 +13,11 @@ description: "I'm not a writer, but I'm going to try to write. Here will be my f
     <span>Essays</span>
   </h1>
 
-<% blog.tags.sort.each do |tag, articles| %>
-  <% if (tag == 'article') then %>
-    <% articles.sort_by(&:title).each do |article| %>
-       <li>
-         <img src="<%= article.data.thumbnail_image %>">
-         <%= link_to article.title, article %>
-       </li>
-    <% end %>
+<% blog("articles").tags.sort.each do |tag, articles| %>
+  <% articles.sort_by(&:title).each do |article| %>
+     <li>
+       <img src="<%= article.data.thumbnail_image %>">
+       <%= link_to article.title, article %>
+     </li>
   <% end %>
 <% end %>

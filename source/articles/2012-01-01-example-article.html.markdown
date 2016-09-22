@@ -1,6 +1,7 @@
 ---
 title: Example Article
 date: 2012-01-01
+blog: articles
 tags: article
 thumbnail_image: /images/test.jpg
 ---

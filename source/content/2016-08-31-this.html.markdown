@@ -1,7 +1,0 @@
----
-title: Letterboxd
-date: 2016-08-31 19:59 UTC
-tags: note
-thumbnail_image: http://pcdn.paravel.netdna-cdn.com/wp-content/uploads/2016/07/sharp-sans2.png
----
-This is an example thing. You probably want to delete it and write your own things!

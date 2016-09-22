@@ -30,11 +30,12 @@ activate :directory_indexes
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  # blog.prefix = "blog"
+  blog.name = "articles"
+  blog.prefix = "articles"
 
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
-  blog.sources = "content/{year}-{month}-{day}-{title}.html"
+  blog.sources = "{year}-{month}-{day}-{title}.html"
   blog.permalink = "{title}.html"
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
@@ -54,8 +55,31 @@ activate :blog do |blog|
   blog.page_link = "page/{num}"
 end
 
+activate :blog do |blog|
+  blog.name = "notes"
+  blog.prefix = "notes"
+  blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{title}.html"
+
+  blog.paginate = true
+  blog.per_page = 2
+  blog.page_link = "page/{num}"
+end 
+
+activate :blog do |blog|
+  blog.name = "things"
+  blog.prefix = "a-thing-a-day"
+  blog.sources = "{year}-{month}-{day}-{title}.html"
+  blog.permalink = "{title}"
+
+  blog.paginate = true
+  blog.per_page = 2
+  blog.page_link = "page/{num}"
+end
+
 def articles_by_tag(tag)
   sitemap.resources.select do |resource|
+    binding.pry resource
     resource.data.tags.include?(tag)
   end
 end

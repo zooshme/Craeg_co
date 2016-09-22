@@ -13,13 +13,4 @@ description: "I'm challenging myself to share a 'thing' a day. Design, photograp
     <span>Anything</span>
   </h1>
 
-<% blog.tags.sort.each do |tag, articles| %>
-  <% if (tag == 'thing') then %>
-    <% articles.sort_by(&:title).each do |article| %>
-    <li>
-      <img src="<%= article.data.thumbnail_image %>">
-      <%= link_to article.title, article %>
-    </li>
-    <% end %>
-  <% end %>
-<% end %>
+<%= blog("things").options.prefix %>

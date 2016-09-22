@@ -1,0 +1,8 @@
+---
+title: Presentable Episode 7
+date: 2016-08-31 19:58 UTC
+blog: notes
+tags: note
+thumbnail_image: http://placehold.it/300x200.jpg
+---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.

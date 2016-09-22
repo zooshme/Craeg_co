@@ -1,0 +1,8 @@
+---
+title: Impossible Foods’ Meat-Free Burger
+date: 2016-08-31 19:59 UTC
+blog: notes
+tags: note
+thumbnail_image: http://placehold.it/300x200.jpg
+---
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.

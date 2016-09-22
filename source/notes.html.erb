@@ -3,6 +3,7 @@ pageable: true
 per_page: 2
 layout: layout
 title: 'Notes'
+blog: "notes"
 description: "A place for me to dump anything cool I learn / find / read / hear."
 ---
 <% if paginate && num_pages > 1 %>
@@ -27,19 +28,15 @@ description: "A place for me to dump anything cool I learn / find / read / hear.
   <aside class="lead-in-detail"></aside>
   <section class="notes-list">
 
-  <% blog.tags.sort.each do |tag, articles| %>
-    <% if (tag == 'note') then %>
-      <% articles.sort_by(&:title).each do |article| %>
-      <article>
-        <h2>
-          <%= link_to article.title, article %>
-        </h2>
-        <time><%= article.date.strftime('%b %e, %Y') %></time>
-        <%= article.summary %>
-        <img src="<%= article.data.thumbnail_image %>">
-      </article>
-      <% end %>
-    <% end %>
-  <% end %>
+  <%= page_number %>
+
+  <%= link_to "Hello", prev_page %>
+  
+  <% page_articles.each do |article| %>
+  <article>
+    <h2><%= link_to article.title, article %></h2>
+    <%= article.summary %>
+  </article>
+  <% end %> 
   </section>
 </div>
